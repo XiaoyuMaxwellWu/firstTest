@@ -1,7 +1,7 @@
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View } from 'react-native';
-import { TextInput } from 'react-native-web';
 import Header from './components/Header';
+import Input from './components/Input';
 
 export default function App() {
   const name = 'Xiaoyu';
@@ -10,10 +10,9 @@ export default function App() {
   };
   return (
     <View style={styles.container}>
-      <Button onPress={onPressLearnMore} title="Learn More" />
       <Header appName={name}></Header>
       <Input onAdd={onTextAdd}></Input>
-      <Text>Open up App.js to start working on your app!{text}</Text>
+      <Text>Open up App.js to start working on your app!{name}</Text>
       <StatusBar style="auto" />
     </View>
   );
