@@ -1,9 +1,9 @@
 import { View, Text, StyleSheet, Modal, Button, SafeAreaView, Header, Image } from 'react-native';
 import React from 'react';
-import Card from './components/Card';
-import Colors from './constants/Colors';
+import Card from '../components/Card';
+import Colors from '../constants/Colors';
 import { LinearGradient } from 'expo-linear-gradient';
-import Stylyings from './constants/Stylyings';
+import Stylyings from '../constants/Stylyings';
 
 export default function GameScreen(props) {
   const { retStart, guessNum, tips, jumpToFinal } = props;
@@ -38,6 +38,3 @@ export default function GameScreen(props) {
     </>
   );
 }
-const styles = StyleSheet.create({
-  container: { flex: 1, alignItems: 'center' },
-});

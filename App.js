@@ -1,11 +1,8 @@
 import { useState } from 'react';
-import { StyleSheet, Text, View, SafeAreaView } from 'react-native';
-import GameScreen from './GameScreen';
-import StartScreen from './StartScreen';
-import FinalScreen from './FinalScreen';
-import TestScreen from './TestScreen.js';
-import Header from './components/Header';
-import Card from './components/Card';
+import { SafeAreaView } from 'react-native';
+import GameScreen from './screens/GameScreen';
+import StartScreen from './screens/StartScreen';
+import FinalScreen from './screens/FinalScreen';
 import Colors from './constants/Colors';
 import { LinearGradient } from 'expo-linear-gradient';
 import Stylyings from './constants/Stylyings';

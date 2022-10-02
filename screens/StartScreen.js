@@ -1,9 +1,9 @@
 import { View, Button, Text, StyleSheet, TextInput, Alert } from 'react-native';
 import React from 'react';
-import Header from './components/Header';
-import Card from './components/Card';
-import Colors from './constants/Colors';
-import Stylyings from './constants/Stylyings';
+import Header from '../components/Header';
+import Card from '../components/Card';
+import Colors from '../constants/Colors';
+import Stylyings from '../constants/Stylyings';
 
 export default function StartScreen(props) {
   //store all the input text
