@@ -1,16 +1,17 @@
-import { View, Button, Text, StyleSheet, TextInput, Alert } from 'react-native';
+import { View, SafeAreaView, Button, Text, StyleSheet, TextInput, Alert } from 'react-native';
 import React from 'react';
 import Header from './components/Header';
 import Card from './components/Card';
 import Colors from './constants/Colors';
+import { LinearGradient } from 'expo-linear-gradient';
 import Stylyings from './constants/Stylyings';
 
 export default function StartScreen(props) {
-  //store all the input text
   const [text, setText] = React.useState('');
   const { onConfirm } = props;
   return (
-    <View style={Stylyings.container}>
+    <SafeAreaView style={styles.container}>
+      <LinearGradient style={Stylyings.background} start={{ x: 0.5, y: 0 }} colors={[Colors.linearFirst, Colors.linearSecond]} />
       <Header input={'Guess My Number'}></Header>
       <Card style={Stylyings.box}>
         <Text style={Stylyings.text}>Enter a Number</Text>
@@ -40,11 +41,12 @@ export default function StartScreen(props) {
           </View>
         </View>
       </Card>
-    </View>
+    </SafeAreaView>
   );
 }
 
 const styles = StyleSheet.create({
+  container: { flex: 1, alignItems: 'center', width: '100%', height: '120%' },
   input: { borderBottomColor: Colors.yellow, width: '12%', borderBottomWidth: 2, color: Colors.yellow, margin: 40 },
   buttonAll: {
     flexDirection: 'row-reverse',

@@ -1,6 +1,6 @@
 import { View, Text, StyleSheet } from 'react-native';
 import React from 'react';
-
+import Colors from '../constants/Colors';
 export default function Header(props) {
   const { input } = props;
   return (
@@ -14,9 +14,9 @@ const styles = StyleSheet.create({
 
   text: {
     fontSize: 20,
-    color: '#531EF9',
+    color: Colors.header,
     padding: '2%',
     borderWidth: 1,
-    borderColor: '#531EF9',
+    borderColor: Colors.header,
   },
 });

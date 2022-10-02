@@ -7,18 +7,17 @@ import Stylyings from './constants/Stylyings';
 
 export default function GameScreen(props) {
   const { retStart, guessNum, tips, jumpToFinal } = props;
-
+  //use tips to control which modal should be visible
   return (
     <>
       <Modal visible={tips == 'win' ? false : true}>
-        <View style={[styles.container, { justifyContent: 'center' }]}>
+        <View style={[Stylyings.container, { justifyContent: 'center' }]}>
           <LinearGradient style={Stylyings.background} start={{ x: 0.5, y: 0 }} colors={[Colors.linearFirst, Colors.linearSecond]} />
-
-          <Card style={styles.box}>
+          <Card style={Stylyings.box}>
             <View>
-              <Text style={styles.text}>You have chosen {guessNum}</Text>
-              <Text style={styles.text}>That's not my number!</Text>
-              <Text style={styles.text}>Guess {tips}!</Text>
+              <Text style={Stylyings.text}>You have chosen {guessNum}</Text>
+              <Text style={Stylyings.text}>That's not my number!</Text>
+              <Text style={Stylyings.text}>Guess {tips}!</Text>
             </View>
             <Button title="I am done" onPress={jumpToFinal} color={Colors.purple}></Button>
             <Button title="Let Me Guess Again" onPress={retStart} color={Colors.red}></Button>
@@ -26,12 +25,11 @@ export default function GameScreen(props) {
         </View>
       </Modal>
       <Modal visible={tips == 'win' ? true : false}>
-        <View style={[styles.container, { justifyContent: 'center' }]}>
+        <View style={[Stylyings.container, { justifyContent: 'center' }]}>
           <LinearGradient style={Stylyings.background} start={{ x: 0.5, y: 0 }} colors={[Colors.linearFirst, Colors.linearSecond]} />
-
-          <Card style={[styles.box, { height: 200 }]}>
-            <Text style={styles.text}>Congrats! You Won!</Text>
-            <View style={styles.button}>
+          <Card style={[Stylyings.box, { height: 200 }]}>
+            <Text style={Stylyings.text}>Congrats! You Won!</Text>
+            <View style={Stylyings.button}>
               <Button color={Colors.red} title="Thank you!" onPress={jumpToFinal}></Button>
             </View>
           </Card>
@@ -41,22 +39,5 @@ export default function GameScreen(props) {
   );
 }
 const styles = StyleSheet.create({
-  container: { flex: 1, backgroundColor: Colors.screenColor, alignItems: 'center' },
-  box: {
-    width: 250,
-    justifyContent: 'space-evenly',
-    marginTop: 40,
-    height: 200,
-  },
-  text: {
-    color: Colors.yellow,
-    textAlign: 'center',
-    fontSize: '20',
-    marginTop: 5,
-    marginLeft: 10,
-    marginRight: 10,
-  },
-  button: {
-    margin: 5,
-  },
+  container: { flex: 1, alignItems: 'center' },
 });
