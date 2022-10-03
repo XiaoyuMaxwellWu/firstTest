@@ -14,7 +14,7 @@ export default function StartScreen(props) {
       <Header input={'Guess My Number'}></Header>
       <Card style={Stylyings.box}>
         <Text style={Stylyings.text}>Enter a Number</Text>
-        <TextInput style={styles.input} onChangeText={setText} blurOnSubmit value={text} keyboardType="numeric"></TextInput>
+        <TextInput style={styles.input} onChangeText={setText} value={text} keyboardType="numeric"></TextInput>
         <View style={styles.buttonAll}>
           <View style={Stylyings.button}>
             <Button
